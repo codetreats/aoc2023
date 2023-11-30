@@ -34,7 +34,7 @@ import java.util.*
 fun main() {
     Logger.level = Level.DEBUG
 
-    val overrideDay: Int? = null // If you don't want to run the current day, override it here
+    val overrideDay: Int? = 1
     val dayOfMonth = overrideDay ?: Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
     val paddedDay = dayOfMonth.pad()
     val logger = Logger("Day$paddedDay", "MAIN")

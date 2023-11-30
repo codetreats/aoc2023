@@ -1,6 +1,6 @@
-# aoc-template-python
+# Advent Of Code 2023
 
-This is a skeleton for [Advent Of Code](https://adventofcode.com/)
+Solutions
 
 ## Language
 
