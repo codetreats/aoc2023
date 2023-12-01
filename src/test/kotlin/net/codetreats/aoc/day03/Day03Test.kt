@@ -17,25 +17,21 @@ class Day03Test {
 
     @Test
     fun testPart01() {
-        classUnderTest.init(false)
-        assertEquals("", classUnderTest.run1())
+        assertEquals("", classUnderTest.run1(false))
     }
 
     @Test
     fun testPart01_dummyData() {
-        classUnderTest.init(true)
-        assertEquals("", classUnderTest.run1())
+        assertEquals("", classUnderTest.run1(true))
     }
 
     @Test
     fun testPart02() {
-        classUnderTest.init(false)
-        assertEquals("", classUnderTest.run2())
+        assertEquals("", classUnderTest.run2(false))
     }
 
     @Test
     fun testPart02_dummyData() {
-        classUnderTest.init(true)
-        assertEquals("", classUnderTest.run2())
+        assertEquals("", classUnderTest.run2(true))
     }
 }

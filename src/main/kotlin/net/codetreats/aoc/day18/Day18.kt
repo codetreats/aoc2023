@@ -10,11 +10,11 @@ class Day18 : Day<List<String>>(18) {
 
     override fun convert(input: List<String>): List<String> = input
 
-    override fun run1(): String {
+    override fun run1(data: List<String>): String {
         return ""
     }
 
-    override fun run2(): String {
+    override fun run2(data: List<String>): String {
         return ""
     }
 }
