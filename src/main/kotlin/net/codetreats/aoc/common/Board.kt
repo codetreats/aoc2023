@@ -1,5 +1,7 @@
 package net.codetreats.aoc.common
 
+import javax.xml.crypto.Data
+
 open class Board<T>(val width: Int, val height: Int, private val initialValue: T)  {
     protected val content = mutableListOf<T>()
 
@@ -18,6 +20,16 @@ open class Board<T>(val width: Int, val height: Int, private val initialValue: T
     }
 
     fun get(x: Int, y: Int): DataPoint<T> = getOrNull(x, y)!!
+
+    fun all() : List<DataPoint<T>> {
+        val all = mutableListOf<DataPoint<T>>()
+        for (x in 0 until width) {
+            for (y in 0 until height) {
+                all.add(get(x, y))
+            }
+        }
+        return all
+    }
 
     fun getOrNull(x: Int, y: Int) : DataPoint<T>? {
         if (x in 0 until width && y in 0 until height) {
@@ -60,4 +72,19 @@ open class Board<T>(val width: Int, val height: Int, private val initialValue: T
     }
 
     open fun valueToString(value: T) : String = value.toString()
+
+    companion object {
+        fun from(lines: List<String>) : Board<Char> {
+            val width = lines[0].length
+            val height = lines.size
+            val board = Board(width, height, '.')
+            for (y in 0 until width) {
+                val line = lines[y]
+                for (x in 0 until width) {
+                    board.set(x, y, line[x])
+                }
+            }
+            return board
+        }
+    }
 }

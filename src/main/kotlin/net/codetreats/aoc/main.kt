@@ -34,7 +34,7 @@ import java.util.*
 fun main() {
     Logger.level = Level.DEBUG
 
-    val overrideDay: Int? = 2
+    val overrideDay: Int? = 3
     val dayOfMonth = overrideDay ?: Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
     val paddedDay = dayOfMonth.pad()
     val logger = Logger("Day$paddedDay", "MAIN")
